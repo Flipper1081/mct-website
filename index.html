@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Команда МСТ помогает бизнесу получать обращения с Авито. Кейсы, гарантия в договоре и бесплатный разбор ниши.">
+<meta name="theme-color" content="#111713">
+<title>МСТ — обращения с Авито для вашего бизнеса</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#111713;--panel:#19211b;--panel-2:#202922;--line:#344239;--cream:#f3efdf;--muted:#b5beb2;--gold:#e8bb61;--gold-bright:#f3cf7d;--green:#80a77f;--serif:Georgia,"Times New Roman",serif;--sans:"Manrope",Arial,sans-serif;--display:"Unbounded","Arial Black",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--cream);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+figure{margin:0}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--gold-bright);outline-offset:3px}
+.wrap{width:min(1160px,calc(100% - 48px));margin-inline:auto}
+.topbar{border-bottom:1px solid rgba(232,187,97,.2)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:inline-flex;align-items:center;gap:13px;text-decoration:none}
+.brand-mark{font:800 22px/1 var(--display);letter-spacing:-.08em;color:var(--bg);background:var(--gold);padding:12px 11px;border-radius:3px}
+.brand-name{display:grid;gap:2px;font-weight:800;font-size:15px;letter-spacing:.03em}
+.brand-name small{color:var(--muted);font-weight:500;font-size:11px;letter-spacing:.05em}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{display:inline-flex;min-height:44px;align-items:center;text-decoration:none;color:var(--muted);font-size:14px}
+.nav-links a:hover{color:var(--cream)}
+.nav-action,.button{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:12px 19px;border:1px solid var(--gold);border-radius:4px;background:var(--gold);color:#182016;text-decoration:none;font:800 14px var(--sans);transition:background .18s ease,color .18s ease}
+button.button{cursor:pointer}
+.nav-action:hover,.button:hover{background:var(--gold-bright);border-color:var(--gold-bright)}
+.nav-links a.nav-action,.nav-links a.nav-action:hover{color:#182016}
+.button.secondary{background:transparent;color:var(--cream);border-color:var(--line)}
+.button.secondary:hover{border-color:var(--gold);color:var(--gold)}
+.hero{position:relative;overflow:hidden;padding:82px 0 56px;background:radial-gradient(ellipse at 84% 18%,rgba(232,187,97,.13),transparent 32%),linear-gradient(120deg,#111713 52%,#172019)}
+.hero:after{content:"";position:absolute;right:-10vw;bottom:-44vw;width:65vw;height:65vw;border:1px solid rgba(232,187,97,.12);border-radius:50%;box-shadow:0 0 0 45px rgba(232,187,97,.025),0 0 0 90px rgba(232,187,97,.02);pointer-events:none}
+.hero-layout{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:58px;align-items:center}
+.kicker{display:flex;align-items:center;gap:10px;color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.04em}
+.kicker:before{content:"";width:26px;height:1px;background:currentColor}
+h1,h2,h3,p{margin-top:0}
+h1{max-width:800px;margin:24px 0;font:600 clamp(38px,6.4vw,76px)/1.12 var(--display);letter-spacing:-.065em}
+h1 span{color:var(--gold)}
+.lead{max-width:600px;margin-bottom:28px;color:#d2d8cd;font-size:18px;line-height:1.7}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.promise{margin-top:27px;display:flex;align-items:flex-start;gap:12px;color:var(--muted);font-size:13px}
+.promise-mark{flex:0 0 22px;height:22px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-weight:800}
+.promise strong{color:var(--cream)}
+.signal{position:relative;padding:27px;background:#1b241d;border:1px solid #53624d;box-shadow:12px 12px 0 rgba(232,187,97,.08)}
+.signal:before{content:"";position:absolute;inset:8px;border:1px solid rgba(232,187,97,.15);pointer-events:none}
+.signal-label{margin:0 0 26px;color:var(--muted);font-size:12px}
+.signal-number{display:flex;align-items:baseline;gap:11px;font:700 clamp(66px,9vw,112px)/.95 var(--display);letter-spacing:-.08em;color:var(--gold)}
+.signal-number small{font:600 18px/1.3 var(--sans);letter-spacing:0;color:var(--cream)}
+.signal-rule{margin:24px 0 17px;height:1px;background:var(--line)}
+.signal-note{margin:0;color:#d6ddd1;font-size:14px}
+.signal-stamp{position:absolute;right:24px;top:25px;width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font:600 22px var(--serif)}
+.proofline{border-block:1px solid var(--line);background:#151c17}
+.proofline .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 0;padding-block:15px}
+.proof-item{padding:3px 13px;border-right:1px solid var(--line);color:var(--gold);font:600 11px/1.5 var(--display);letter-spacing:.035em;text-align:center}
+.proof-item:last-child{border:0}
+section{padding:82px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:32px}
+.section-head h2{max-width:680px;margin:12px 0 0;font:600 clamp(29px,4vw,45px)/1.2 var(--display);letter-spacing:-.055em}
+.section-head p{max-width:390px;margin:0;color:var(--muted);font-size:14px}
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.case{min-height:230px;padding:23px 21px;background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between}
+.case:first-child{background:#22291f;border-color:#63583d}
+.case-number{font:600 clamp(31px,4vw,44px)/1.15 var(--display);letter-spacing:-.07em;color:var(--gold)}
+.case-number small{display:block;margin-top:8px;color:var(--muted);font:500 12px/1.5 var(--sans);letter-spacing:0}
+.case h3{margin:25px 0 7px;font-size:16px}
+.case p{margin:0;color:var(--muted);font-size:13px}
+.case{overflow:hidden;padding:0}
+.case-media{height:245px;margin:0;background:#0c110e;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.case-media img{display:block;width:100%;height:100%;object-fit:contain}
+.case-image{display:flex;width:100%;height:100%;align-items:center;justify-content:center}
+.case-body{padding:20px}
+.case-body .case-number{margin:0;color:var(--gold);font:600 clamp(30px,4vw,42px)/1.15 var(--display);letter-spacing:-.07em}
+.case-body .case-number small{display:block;margin-top:6px;color:var(--muted);font:500 12px/1.5 var(--sans);letter-spacing:0}
+.case-body h3{margin:15px 0 7px}
+.case-body p:last-child{margin:0;color:var(--muted);font-size:13px}
+.case-rental{grid-column:auto;display:flex;min-height:230px;flex-direction:column;justify-content:center;gap:12px;padding:24px;border:1px solid #68593a;background:linear-gradient(100deg,#25291e,#19211b 65%)}
+.case-rental p{font-size:14px}
+.feature-case{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:24px;padding:20px;border:1px solid #5f6046;background:#20271f}
+.tag{display:inline-block;padding:4px 10px;border:1px solid rgba(232,187,97,.42);border-radius:999px;background:rgba(232,187,97,.08);color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.feature-case h3{margin:6px 0 12px;font:600 22px/1.3 var(--display)}
+.feature-case p{color:#d0d8ce}
+.feature-case strong{color:var(--gold-bright)}
+.feature-case .case-number{font-size:34px}
+.feature-case .case-number small{display:inline-block;margin:0 0 0 8px;color:var(--cream);font-size:15px;vertical-align:baseline}
+.feature-images{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;align-content:start}
+.proof-shot{display:block;background:#0c110e;border:1px solid var(--line);text-decoration:none}
+.proof-shot img{display:block;width:100%;height:260px;object-fit:contain}
+.feature-images .proof-shot img{height:auto;object-fit:contain}
+.proof-shot figcaption{padding:9px 11px;color:var(--muted);font-size:11px;line-height:1.5}
+.evidence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:960px;margin:27px auto}
+.evidence-grid .proof-shot img{height:auto;object-fit:contain}
+.honesty{padding:60px 0;background:#20231c;border-block:1px solid #514a35}
+.honesty-grid{display:grid;grid-template-columns:.65fr 1.15fr .8fr;gap:28px;align-items:start}
+.honesty h2{margin:12px 0 0;font:600 clamp(27px,4vw,40px)/1.2 var(--display);letter-spacing:-.05em}
+.honesty-copy{color:#e1e1d5}
+.quote{margin:18px 0;padding:16px 20px;border-left:2px solid var(--gold);background:#151a15;color:var(--gold-bright);font:600 18px/1.5 var(--serif)}
+.assistant-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:25px}
+.assistant-grid .proof-shot img{height:auto;object-fit:contain}
+.assistant-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.assistant-point{padding:17px;border-top:2px solid var(--gold);background:var(--panel)}
+.assistant-point b{display:block;font-size:14px}
+.assistant-point p{margin:5px 0 0;color:var(--muted);font-size:12px}
+.trust-card{overflow:hidden}
+.trust-card img{display:block;width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;margin-bottom:15px;border-radius:8px}
+.trust-card:nth-child(4) img{aspect-ratio:auto;height:310px;object-fit:contain;background:#0c110e}
+.cert-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
+.cert-gallery img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;background:#0c110e;border:1px solid var(--line);border-radius:10px}
+.cert-gallery figcaption{font-size:12px;color:var(--muted);padding:9px 4px}
+.step-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+.step-card{padding:19px;background:#151c17;border:1px solid var(--line)}
+.step-card b{display:block;margin-bottom:8px;color:var(--gold)}
+.step-card p{margin:0;color:var(--muted);font-size:13px}
+.story{background:#18201a;border-block:1px solid #29362c}
+.story-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+.story h2{font:600 clamp(28px,4vw,44px)/1.2 var(--display);letter-spacing:-.055em}
+.story-copy{max-width:660px;color:#d0d8ce}
+.story-copy p{margin-bottom:16px}
+.flow{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid #53624d;border-left:1px solid #53624d}
+.flow-step{min-height:128px;padding:20px;border-right:1px solid #53624d;border-bottom:1px solid #53624d}
+.flow-step b{display:block;margin-bottom:7px;color:var(--gold)}
+.flow-step p{margin:0;color:var(--muted);font-size:13px}
+.trust-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.trust-card{padding:23px;border-top:2px solid var(--gold);background:var(--panel)}
+.trust-card h3{margin:0 0 9px;font-size:16px}
+.trust-card p{margin:0;color:var(--muted);font-size:14px}
+.bottom-cta{padding:65px 0;background:var(--gold);color:#192017}
+.bottom-cta .cta-layout{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.bottom-cta h2{max-width:720px;margin:0;font:600 clamp(30px,5vw,55px)/1.12 var(--display);letter-spacing:-.06em}
+.bottom-cta p{margin:10px 0 0;color:#354033}
+.bottom-cta .button{flex:none;background:#182017;border-color:#182017;color:var(--cream);transition:background .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.bottom-cta .button:hover{background:#263226;border-color:#263226;transform:translateY(-3px);box-shadow:0 10px 22px rgba(24,32,23,.2)}
+.bottom-cta .button:active{transform:translateY(-1px);box-shadow:0 4px 12px rgba(24,32,23,.16)}
+footer{padding:31px 0;background:#0c110e;color:var(--muted);font-size:13px}
+.footer-layout{display:flex;justify-content:space-between;gap:25px}
+footer p{margin:0}
+footer a{color:var(--cream);text-decoration:none}
+.footer-links a{display:inline-flex;min-height:44px;align-items:center}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.form-overlay{position:fixed;inset:0;z-index:5;display:none;place-items:center;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:20px;overflow:auto;border:0;background:transparent;color:inherit}
+.form-overlay::backdrop{background:rgba(0,0,0,.72)}
+.form-overlay[open]{display:grid}
+.dialog{position:relative;width:min(520px,100%);max-height:90vh;overflow:auto;padding:30px;background:#19211b;border:1px solid #667557;box-shadow:0 24px 80px rgba(0,0,0,.42)}
+.dialog h2{padding-right:62px;font:600 26px/1.2 var(--display)}
+.dialog p{color:var(--muted);font-size:14px}
+.close{position:absolute;right:16px;top:16px;width:44px;height:44px;border:1px solid var(--line);background:transparent;color:var(--cream);font-size:22px;cursor:pointer}
+form{display:grid;gap:10px}
+label{font-size:13px;font-weight:700}
+input,textarea{width:100%;min-height:48px;padding:12px;border:1px solid #53624d;border-radius:3px;background:#111713;color:var(--cream);font:15px var(--sans)}
+textarea{resize:vertical}
+form .button{width:100%;margin-top:8px;cursor:pointer}
+.form-note{min-height:24px;margin:0;color:var(--green)!important}
+@media(max-width:900px){.hero-layout{gap:30px}.cases{grid-template-columns:repeat(2,minmax(0,1fr))}.story-grid{gap:35px}.section-head{align-items:start;flex-direction:column}.assistant-points{grid-template-columns:1fr}.cert-gallery{grid-template-columns:repeat(2,1fr)}.step-row{grid-template-columns:repeat(2,1fr)}.honesty-grid{grid-template-columns:.7fr 1.3fr}.honesty-proof{grid-column:2}}
+@media(min-width:621px) and (max-width:820px){.nav{flex-wrap:wrap;gap:6px;padding-block:10px}.nav-links{flex:1 0 100%;justify-content:space-between;gap:12px}.nav-links a{font-size:13px}.nav-action{white-space:nowrap}}
+@media(max-width:620px){.wrap{width:min(100% - 32px,500px)}.nav{min-height:68px;gap:10px}.brand{gap:9px}.brand-name{font-size:13px}.brand-name small{font-size:10px}.nav-links{gap:14px}.nav-links>a:not(.nav-action){display:none}.nav-action{min-height:44px;padding:9px 8px;font-size:11px;white-space:nowrap}.hero{padding:52px 0 38px}.hero-layout{grid-template-columns:1fr;gap:34px}h1{font-size:clamp(36px,10vw,52px)}.lead{font-size:16px}.signal{padding:24px}.signal-number{font-size:82px}.proofline .wrap{grid-template-columns:repeat(2,1fr)}.proof-item:nth-child(2){border-right:0}.proof-item:nth-child(-n+2){border-bottom:1px solid var(--line)}section{padding:58px 0}.cases{gap:9px}.case{min-height:207px;padding:17px 14px}.case-number{font-size:30px}.case h3{font-size:14px}.case p{font-size:12px}.story-grid{grid-template-columns:1fr;gap:22px}.flow-step{min-height:115px;padding:15px}.trust-grid{grid-template-columns:1fr}.bottom-cta .cta-layout{align-items:flex-start;flex-direction:column}.footer-layout{flex-direction:column}.footer-links{gap:14px}}
+@media(max-width:760px){.proofline .wrap{grid-template-columns:repeat(3,1fr)}.assistant-grid{grid-template-columns:1fr}.assistant-points{grid-template-columns:1fr}.cert-gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.cases{grid-template-columns:1fr}.case{padding:0}.assistant-grid{grid-template-columns:1fr}.feature-case,.honesty-grid{grid-template-columns:minmax(0,1fr);gap:20px}.honesty-proof{grid-column:auto}.feature-case{padding:15px}.feature-case>*{min-width:0}.feature-images{grid-template-columns:minmax(0,1fr);min-width:0}.evidence-grid{grid-template-columns:1fr}.evidence-grid .proof-shot img{height:auto}.case-rental{grid-column:auto;grid-template-columns:1fr;gap:10px}.cert-gallery{grid-template-columns:1fr}.cert-gallery img{height:auto}.step-row{grid-template-columns:1fr 1fr}.proofline .wrap{grid-template-columns:repeat(2,1fr)}.proof-item{border-bottom:1px solid var(--line)}.proof-item:nth-child(2n){border-right:0}.proof-item:nth-child(n+5){border-bottom:0}}
+@media(max-width:380px){.nav{flex-wrap:wrap;justify-content:flex-start;gap:6px;padding-block:8px}.brand{flex:1 0 100%;gap:8px}.brand-name{font-size:12px}.brand-name small{font-size:10px}.nav-links{flex:1 0 100%;justify-content:flex-end}.nav-action{padding-inline:9px;font-size:11px}.signal-number{font-size:74px;gap:7px}.signal-number small{font-size:16px}.flow{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <nav class="nav wrap" aria-label="Основная навигация">
+    <a class="brand" href="index.html" aria-label="МСТ — на главную"><span class="brand-mark">МСТ</span><span class="brand-name">Marketing Creative Team<small>Продвижение на Авито</small></span></a>
+    <div class="nav-links"><a href="#cases">Кейсы</a><a href="#approach">Как работаем</a><a href="#team">Команда</a><a href="tariffs.html">Тарифы</a><a class="nav-action" href="https://wa.me/79199996921?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%20%D0%BD%D0%B8%D1%88%D0%B8">Обсудить задачу</a></div>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <div class="wrap hero-layout">
+    <div>
+      <p class="kicker">Продвижение бизнеса на Авито</p>
+      <h1>Заявки с Авито — <span>потоком,</span><br>а не по праздникам</h1>
+      <p class="lead">Мы помогаем выстроить поток обращений на Авито и довести покупателя от объявления до заказа.</p>
+      <div class="hero-actions"><button class="button" type="button" data-open-form>Получить разбор ниши</button><a class="button secondary" href="tariffs.html">Посмотреть тарифы</a></div>
+      <div class="promise"><span class="promise-mark" aria-hidden="true">✓</span><span><strong>Гарантия в договоре:</strong> минимум 100 обращений за месяц — или следующий месяц работаем бесплатно. Без звёздочек и мелкого шрифта.</span></div>
+      <p class="lead" style="margin:16px 0 0;font-size:14px">Команда из 15 авитологов · Два офиса в Дагестане · Договор с онлайн-подписью</p>
+    </div>
+    <aside class="signal" aria-label="Гарантия: минимум 100 обращений за 30 дней">
+      <span class="signal-stamp" aria-hidden="true">М</span><p class="signal-label">Результат, закреплённый в договоре</p>
+      <div class="signal-number">100<small>обращений<br>за 30 дней</small></div><div class="signal-rule"></div>
+      <p class="signal-note">Цель кампании — измеримые обращения, которые можно проверить в кабинете Авито.</p>
+    </aside>
+  </div>
+</section>
+<div class="proofline" aria-label="Результаты проектов из исходного сайта">
+  <div class="wrap"><span class="proof-item">КОНДИЦИОНЕРЫ — 1 600+ ОБРАЩЕНИЙ</span><span class="proof-item">ДИВАНЫ — 1 200+</span><span class="proof-item">АРЕНДА ДОМА У МОРЯ — 487 ЗАЯВОК С БЮДЖЕТА 5 000 ₽</span><span class="proof-item">САДОВАЯ МЕБЕЛЬ — 500+</span><span class="proof-item">ВХОДНЫЕ ДВЕРИ — 200+</span><span class="proof-item">30+ КЛИЕНТОВ В РАБОТЕ</span></div>
+</div>
+<section id="cases">
+  <div class="wrap">
+    <div class="section-head"><div><p class="kicker">Кейсы</p><h2>Цифры из кабинетов, а не из презентаций</h2></div><p>Скриншоты — статистика Авито клиентов МСТ. Имена и данные скрыты по договорённости.</p></div>
+    <div class="cases">
+      <article class="case"><figure class="case-media"><a class="case-image" href="assets/mct-source-01.jpg" target="_blank" rel="noopener"><img src="assets/mct-source-01.jpg" alt="Статистика Авито: 1 612 контактов за месяц в нише кондиционеров" loading="lazy" decoding="async"></a></figure><div class="case-body"><p class="case-number">1 612<small>обращений за месяц</small></p><h3>Кондиционеры</h3><p>16 397 просмотров, средняя цена контакта — 24,9 ₽. Сезон отработан на полную.</p></div></article>
+      <article class="case"><figure class="case-media"><a class="case-image" href="assets/mct-source-02.jpg" target="_blank" rel="noopener"><img src="assets/mct-source-02.jpg" alt="Статистика Авито по диванам: 1 265 контактов" loading="lazy" decoding="async"></a></figure><div class="case-body"><p class="case-number">1 265<small>обращений за месяц</small></p><h3>Диваны</h3><p>29 409 просмотров, стоимость контакта — 30,9 ₽. Поток, который не останавливается.</p></div></article>
+      <article class="case case-rental"><span class="tag">Малый бюджет</span><div><p class="case-number">487<small>заявок · бюджет 5 000 ₽</small></p><h3>Аренда дома у моря</h3><p>Всего два объявления. Цена клиента — около 10 ₽. Дело не в бюджете — дело в точности настройки.</p></div></article>
+      <article class="case"><figure class="case-media"><a class="case-image" href="assets/mct-source-03.jpg" target="_blank" rel="noopener"><img src="assets/mct-source-03.jpg" alt="Объявление и статистика сообщений Авито в нише бытовой техники" loading="lazy" decoding="async"></a></figure><div class="case-body"><p class="case-number">173<small>контакта за 20 дней</small></p><h3>Бытовая техника</h3><p>Холодильники и морозильные камеры: стабильные заявки каждый день, рассрочка и доставка в офере.</p></div></article>
+    </div>
+    <article class="feature-case" aria-label="Кейс с историей: садовая мебель, Махачкала"><div><span class="tag">Кейс с историей</span><p class="case-number" style="margin:16px 0 4px">500+<small>обращений за месяц</small></p><h3>Садовая мебель, Махачкала</h3><p>Этот клиент полгода работал с нами по бытовой технике. Потом ушёл — решил попробовать других авитологов. Мы не уговаривали. Через 2 месяца он вернулся со словами «я понял, что вы лучше» — и доверил нам не только прежний проект, но и новый: садовую мебель.</p><p>Результат нового проекта за первый месяц: <strong>500 обращений, 11 323 просмотра, средняя цена контакта — 37 ₽.</strong></p><p>Важная деталь: <strong>никакого масспостинга.</strong> Каждое объявление выкладывали вручную, с проработкой под запросы покупателей. Это дало в 2 раза меньше затрат, чем при массовой заливке — клиент платит только за то, что работает.</p></div><div class="feature-images"><figure><a class="proof-shot" href="assets/mct-source-04.jpg" target="_blank" rel="noopener"><img src="assets/mct-source-04.jpg" alt="Статистика Авито: 500 контактов за месяц и 11 323 просмотра в проекте садовой мебели" loading="lazy" decoding="async"><figcaption>Кабинет клиента: 500 контактов за месяц (8 мая — 8 июня)</figcaption></a></figure><figure><a class="proof-shot" href="assets/mct-source-05.jpg" target="_blank" rel="noopener"><img src="assets/mct-source-05.jpg" alt="Переписка с клиентом: «И снова здравствуйте»" loading="lazy" decoding="async"><figcaption>То самое возвращение: «И снова здравствуйте 🤝»</figcaption></a></figure></div></article>
+  </div>
+</section>
+<section class="story" id="approach">
+  <div class="wrap story-grid">
+    <div><p class="kicker">Как это работает</p><h2>Воронка продаж: от объявления до заказа</h2></div>
+    <div class="story-copy"><p>Мы не просто «даём заявки». Мы строим воронку в 3 шага: профессиональное объявление приводит покупателя → ИИ-ассистент консультирует и греет его прямо в Авито → дальше переводит в WhatsApp на сайт-витрину с моделями и удобными кнопками заказа.</p><p>Каждый шаг закрывает свою задачу: объявление — привлекает, ассистент — не даёт заявке потеряться (даже ночью), сайт — дожимает до решения «беру».</p><p>Ниже — реальный пример на проекте «Садовая мебель, Хасавюрт»: с утра в одних только сообщениях Авито — десятки покупателей.</p>
+    </div>
+  </div>
+  <div class="wrap evidence-grid">
+    <figure><a class="proof-shot" href="assets/mct-source-06.jpg" target="_blank" rel="noopener"><img src="assets/mct-source-06.jpg" alt="Список сообщений покупателей Авито по объявлениям садовой мебели" loading="lazy" decoding="async"><figcaption>Утро на одном объявлении — десятки покупателей пишут сами</figcaption></a></figure>
+    <figure><a class="proof-shot" href="assets/mct-source-07.jpg" target="_blank" rel="noopener"><img src="assets/mct-source-07.jpg" alt="Каталог-витрина с моделями Бостон и Изабелла и кнопкой цены в WhatsApp" loading="lazy" decoding="async"><figcaption>Шаг 3 — сайт-витрина: каждая модель с кнопкой заказа в WhatsApp</figcaption></a></figure>
+    <figure><a class="proof-shot" href="assets/mct-source-08.jpg" target="_blank" rel="noopener"><img src="assets/mct-source-08.jpg" alt="ИИ-ассистент отвечает на вопросы в Авито и переводит покупателя в WhatsApp" loading="lazy" decoding="async"><figcaption>Ассистент ведёт диалог и помогает перейти к заказу</figcaption></a></figure>
+  </div>
+  <div class="wrap flow"><div class="flow-step"><b>Профессиональное объявление</b><p>Привлекает покупателя в Авито.</p></div><div class="flow-step"><b>ИИ-ассистент 24/7</b><p>Консультирует, греет и переводит в WhatsApp.</p></div><div class="flow-step"><b>Сайт-витрина</b><p>Модели, цены, кнопки WhatsApp, группы и Instagram.</p></div><div class="flow-step"><b>Заказ оформлен</b><p>Вам — отгружать и считать прибыль.</p></div></div>
+</section>
+<section class="honesty" aria-labelledby="honesty-title">
+  <div class="wrap honesty-grid"><div><p class="kicker">Честно о трудностях</p><h2 id="honesty-title">Был теневой бан. По своей вине.</h2></div><div class="honesty-copy"><p>Проект: садовая мебель, Хасавюрт. Мы допустили ошибку, и объявления попали под теневой бан — охваты просели. Мы сразу позвонили клиенту и сказали как есть:</p><blockquote class="quote">«Это наша ошибка. Исправляем за свой счёт».</blockquote><p>Даже в бане клиенту продолжали писать <strong>20–30 человек в день</strong>. А пока выходили из бана — построили ту самую систему, которая работает выше, чем до него.</p><p>Рассказываем о провале, потому что вы должны знать, как мы ведём себя, когда что-то идёт не так. Бросить проект мы не имеем права — гарантия в договоре.</p></div><figure class="honesty-proof"><a class="proof-shot" href="assets/mct-source-09.jpg" target="_blank" rel="noopener"><img src="assets/mct-source-09.jpg" alt="Стена сертификатов и благодарностей команды МСТ" loading="lazy" decoding="async"><figcaption>Наша стена сертификатов и благодарностей</figcaption></a></figure></div>
+</section>
+<section class="story" aria-labelledby="assistant-title">
+  <div class="wrap"><div class="section-head"><div><p class="kicker">Наша разработка</p><h2 id="assistant-title">Наш менеджер не спит. Вообще.</h2></div><p>Покупатели пишут в полночь и в выходные. Кто ответил первым — тот и продал. ИИ-ассистент помогает не пропустить обращение.</p></div>
+    <p class="story-copy">Покупатели пишут в полночь и в выходные. Кто ответил первым — тот и продал. Мы подключаем клиентам ИИ-ассистента, который не пропускает ни одной заявки.</p>
+    <div class="assistant-grid"><figure><a class="proof-shot" href="assets/mct-source-10.jpg" target="_blank" rel="noopener"><img src="assets/mct-source-10.jpg" alt="ИИ-ассистент отвечает покупателю на арабском и ведёт диалог к заказу" loading="lazy" decoding="async"><figcaption>Покупатель пишет «Салам алейкум» — ассистент отвечает на арабском и ведёт к заказу</figcaption></a></figure><figure><a class="proof-shot" href="assets/mct-source-11.jpg" target="_blank" rel="noopener"><img src="assets/mct-source-11.jpg" alt="ИИ-ассистент уточняет запрос и переводит покупателя в WhatsApp" loading="lazy" decoding="async"><figcaption>Грамотно уточняет запрос и переводит покупателя в WhatsApp — к каталогу и оплате</figcaption></a></figure></div>
+    <div class="assistant-points"><div class="assistant-point"><b>Мгновенный ответ 24/7</b><p>Ночь, выходные, праздники — заявки не сгорают.</p></div><div class="assistant-point"><b>Ведёт диалог как человек</b><p>Уточняет, подбирает, отвечает на вопросы.</p></div><div class="assistant-point"><b>Доводит до заказа</b><p>Переводит в WhatsApp к каталогу и менеджеру.</p></div></div>
+  </div>
+</section>
+<section id="team">
+  <div class="wrap"><div class="section-head"><div><p class="kicker">Почему нам доверяют</p><h2>У нас есть адрес. Даже два.</h2></div><p>Мы не «фрилансер из интернета», который завтра пропадёт с предоплатой. К нам можно приехать в офис в любой рабочий день.</p></div>
+    <div class="trust-grid">
+      <article class="trust-card"><img src="assets/mct-source-12.jpg" alt="Офис МСТ Команды" loading="lazy"><h3>Два офиса в Дагестане</h3><p>Махачкала, Имама Шамиля 4/1 · Хасавюрт, Датуева 38. Единственные в нише — приезжайте знакомиться.</p></article>
+      <article class="trust-card"><img src="assets/mct-source-13.jpg" alt="Специалисты МСТ работают в офисе" loading="lazy"><h3>Команда из 15 авитологов</h3><p>Ваш проект ведёт специалист, а за его спиной — опыт всей команды. Сложные случаи разбираем вместе: 15 голов сильнее одной.</p></article>
+      <article class="trust-card"><img src="assets/mct-source-14.jpg" alt="Пункт договора о гарантии не менее 100 заявок за 30 дней" loading="lazy"><h3>Гарантия прописана в договоре</h3><p>Не менее 100 заявок за 30 дней — или дополнительный месяц работы бесплатно. Договор подписываем онлайн.</p></article>
+      <article class="trust-card"><img src="assets/mct-source-15.jpg" alt="Истамулов Амир Аюбович, один из основателей МСТ" loading="lazy"><h3>Истамулов Амир Аюбович</h3><p>Один из основателей команды. За последний год прошёл 3 обучения по Авито — и продолжает изучать новые методы и фишки по сей день, чтобы клиенты получали то, что работает сейчас, а не год назад.</p></article>
+    </div>
+    <div class="certs"><h3>Сертификаты и благодарности</h3><div class="cert-gallery">
+      <figure><img src="assets/mct-source-16.jpg" alt="Благодарственное письмо от строительной компании «Капитал Строй»" loading="lazy"><figcaption>Благодарность от «Капитал Строй» за сопровождение рекламы на Авито</figcaption></figure>
+      <figure><img src="assets/mct-source-17.jpg" alt="Сертификат и благодарственные материалы команды МСТ" loading="lazy"><figcaption>Сертификаты команды и благодарственные письма от клиентов</figcaption></figure>
+      <figure><img src="assets/mct-source-18.jpg" alt="Пример сайта-витрины для клиента с кнопками связи" loading="lazy"><figcaption>Ещё один пример, как мы для клиента заполняем сайт</figcaption></figure>
+    </div></div>
+  </div>
+</section>
+<section class="story" aria-labelledby="steps-title"><div class="wrap"><div class="section-head"><div><p class="kicker">Как начать</p><h2 id="steps-title">От заявки до потока обращений — 4 шага</h2></div></div>
+  <div class="step-row"><article class="step-card"><b>01 · Вы пишете нишу и город</b><p>В WhatsApp или через форму ниже — 1 минута.</p></article><article class="step-card"><b>02 · Бесплатный разбор</b><p>Анализируем нишу, конкурентов и спрос. Честно говорим, есть ли там деньги.</p></article><article class="step-card"><b>03 · Договор онлайн</b><p>С гарантией 100 обращений. Подпись — не выходя из дома.</p></article><article class="step-card"><b>04 · Заявки пошли</b><p>Контролируем цифры каждый день и не исчезаем после запуска.</p></article></div>
+</div></section>
+<section class="bottom-cta">
+  <div class="wrap cta-layout"><div><p class="kicker" style="color:#354033">Бесплатный разбор ниши</p><h2>Узнайте, сколько заявок возможно в вашей нише</h2><p>Разберём вашу ситуацию и скажем честно — даже если вы не станете нашим клиентом.</p></div><button class="button" type="button" data-open-form>Запросить разбор ниши</button></div>
+</section>
+</main>
+<footer><div class="wrap footer-layout"><p><strong>МСТ Команда</strong><br>Marketing Creative Team · Продвижение бизнеса на Авито</p><p><strong>Офисы</strong><br>Махачкала, Имама Шамиля 4/1<br>Хасавюрт, ул. Датуева, 38</p><div class="footer-links"><a href="tariffs.html">Тарифы</a><a href="https://wa.me/79199996921">WhatsApp: +7 919 999-69-21</a><a href="https://t.me/mans_ozd">Telegram: @mans_ozd</a></div></div></footer>
+<dialog class="form-overlay" id="lead-dialog" aria-labelledby="form-title"><div class="dialog"><button class="close" type="button" aria-label="Закрыть форму" data-close-form>×</button><h2 id="form-title">Бесплатный разбор ниши</h2><p>Заполните поля — WhatsApp откроет готовый текст. Сообщение отправите сами.</p>
+<form id="lead-form"><label for="client-name">Как к вам обращаться</label><input id="client-name" name="name" autocomplete="name" required>
+<label for="client-niche">Ниша и город</label><input id="client-niche" name="niche" placeholder="Например: мебель, Махачкала" required>
+<label for="client-comment">Что важно учесть</label><textarea id="client-comment" name="comment" rows="3"></textarea>
+<button class="button" type="submit">Продолжить в WhatsApp</button><p class="form-note" id="form-note" role="status" aria-live="polite"></p></form></div></dialog>
+<script>
+const dialog=document.getElementById("lead-dialog");
+document.querySelectorAll("[data-open-form]").forEach(button=>button.addEventListener("click",()=>dialog.showModal()));
+document.querySelector("[data-close-form]").addEventListener("click",()=>dialog.close());
+dialog.addEventListener("click",event=>{if(event.target===dialog)dialog.close()});
+document.getElementById("lead-form").addEventListener("submit",event=>{
+  event.preventDefault();
+  const form=new FormData(event.currentTarget);
+  const lines=["Здравствуйте! Хочу бесплатный разбор ниши.","Имя: "+form.get("name"),"Ниша и город: "+form.get("niche")];
+  if(form.get("comment"))lines.push("Комментарий: "+form.get("comment"));
+  document.getElementById("form-note").textContent="Откроется WhatsApp с подготовленным текстом. Нажмите «Отправить» в приложении.";
+  window.open("https://wa.me/79199996921?text="+encodeURIComponent(lines.join("\n")),"_blank","noopener,noreferrer");
+});
+</script>
+</body>
+</html>
+
